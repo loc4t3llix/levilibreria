@@ -4,7 +4,7 @@ Sistema minimale per gestire una libreria con funzioni di catalogo, prestito,
 restituzione e prolungamento del prestito, oltre a una vista semplificata per i
 gestori.
 
-## Funzionalita'
+## Funzionalità
 - Catalogo con copie disponibili
 - Prestito e restituzione
 - Prolungamento prestito

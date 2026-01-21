@@ -83,8 +83,9 @@ class LibrarySystem:
         loan.returned = True
         loan.returned_at = return_date or date.today()
         record = self._books.get(loan.book_id)
-        if record is not None:
-            record.available_copies += 1
+        if record is None:
+            raise ValueError("book_id not found for loan")
+        record.available_copies += 1
 
     def extend_loan(self, loan_id: str, new_due_date: date) -> None:
         if not isinstance(new_due_date, date):
